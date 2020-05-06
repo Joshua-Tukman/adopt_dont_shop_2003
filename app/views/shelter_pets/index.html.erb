@@ -1,0 +1,13 @@
+<h1><%= @shelter.name %></h1>
+
+<h3 align = "center"><%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %></h3>
+<ol>
+<% @pets.each do |pet| %>
+  <section id="pet-<%=pet.id%>">
+    <img src="<%=pet.image%>" width="200", height=auto></img><br>
+    <li><p>Name: <strong><%= pet.name %></strong></p></li><br>
+    <p>Age: <strong><%= pet.age %></strong></p><br>
+    <p>Sex: <strong><%= pet.sex %></strong></p><br>
+  </section>
+<% end %>
+</ol>

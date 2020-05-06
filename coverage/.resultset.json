@@ -213,11 +213,83 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
           null
         ]
       },
       "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/helpers/application_helper.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/spec/features/pets/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/models/shelter.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/models/application_record.rb": {
+        "lines": [
+          1,
           1,
           null
         ]
@@ -236,47 +308,28 @@
           null
         ]
       },
-      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/spec/models/shelter_spec.rb": {
+      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/controllers/pets_controller.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          2,
-          2,
-          2,
-          2,
-          2,
           null,
           null,
           1,
-          2,
+          1,
           null,
           null
         ]
       },
-      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/models/shelter.rb": {
+      "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/app/controllers/application_controller.rb": {
         "lines": [
           1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           null
         ]
       }
     },
-    "timestamp": 1588648563
+    "timestamp": 1588733460
   }
 }

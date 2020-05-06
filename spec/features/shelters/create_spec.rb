@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
-  describe 'new page' do
+  describe 'new shelter page' do
     it 'can create a new shelter in the system' do
 
       visit 'shelters/new'

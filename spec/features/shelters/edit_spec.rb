@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
-  describe 'edit page' do
+  describe 'shelter edit page' do
     it 'has a form to update all of shelters information' do
 
       shelter1 = Shelter.create(name: "Pet House",
@@ -33,7 +33,7 @@ RSpec.describe 'As a visitor' do
       expect(current_path).to eq("/shelters/#{shelter1.id}")
 
       expect(page).to have_content("Love All Animals")
-    
+
     end
   end
 end

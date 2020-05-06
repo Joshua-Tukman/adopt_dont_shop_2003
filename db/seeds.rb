@@ -22,3 +22,13 @@ shelter3 = Shelter.create(name: "Dogs Rock",
                            city: "Boulder",
                            state: "Colorado",
                            zip: "81111")
+
+lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
+                              name: "Lucille",
+                              age: 3,
+                              sex: "Female")
+
+george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
+                              name: "George",
+                              age: 4,
+                              sex: "Male")

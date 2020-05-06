@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
-  describe 'show page' do
+  describe 'shelter show page' do
+    
     before(:each) do
       @shelter1 = Shelter.create(name: "Pet House",
                                  address: "12 Main St.",

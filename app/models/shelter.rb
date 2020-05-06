@@ -7,5 +7,5 @@ class Shelter < ApplicationRecord
                         :zip
 
   has_many :pets
-  
+
 end
