@@ -5,4 +5,5 @@
 <h4>Age: <%= @pet.age %></h4><br>
 <h4>Sex: <%= @pet.sex %></h4><br>
 
-<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
+<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %><br>
+<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>

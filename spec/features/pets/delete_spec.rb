@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
-  describe 'pets edit page' do
-
-    it 'has a form to edit the pets information' do
-
+  describe 'pet delete function on pet show page' do
+    it 'has a link to delete pet' do
       shelter1 = Shelter.create(name: "Pet House",
                                  address: "12 Main St.",
                                  city: "Denver",
@@ -21,20 +19,16 @@ RSpec.describe 'As a visitor' do
                                      age: 4,
                                      sex: "Male")
 
-      visit "/pets/#{lucille.id}/edit"
+      visit "/pets"
+      expect(page).to have_content(lucille.name)
 
-      fill_in :name, with: "Lucy"
-      fill_in :image, with: "https://www.wistv.com/resizer/OG31bWaZ8eZdQaS9hHTWYbzVyG4=/1200x600/arc-anglerfish-arc2-prod-raycom.s3.amazonaws.com/public/UIX6NOMHARHIPDOTDETOPCZBXE.jpg"
-      fill_in :description, with: "Excellent pet for people with kids!"
-      fill_in :age, with: 6
-      fill_in :sex, with: "female"
+      visit "/pets/#{lucille.id}"
 
-      click_button "Update Pet"
+      click_link "Delete Pet"
 
-      expect(current_path).to eq("/pets/#{lucille.id}")
+      expect(current_path).to eq("/pets")
+      expect(page).to_not have_content(lucille.name)
 
-      #expect(lucille.name).to eq("Lucy")
-      #expect(lucille.description).to eq("Excellent pet for people with kids!")
     end
   end
 end
