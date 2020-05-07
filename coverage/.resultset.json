@@ -205,16 +205,18 @@
       "/Users/joshuatukman/modtwo/adopt_dont_shop_2003/config/routes.rb": {
         "lines": [
           1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
+          null,
+          1,
           1,
           1,
           1,
@@ -277,8 +279,20 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           null,
           1,
           1,
@@ -294,6 +308,6 @@
         ]
       }
     },
-    "timestamp": 1588820469
+    "timestamp": 1588890094
   }
 }
