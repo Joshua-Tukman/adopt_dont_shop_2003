@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/', to: 'shelters#index'
   #shelters
   get '/shelters/new', to: 'shelters#new'
   get '/shelters', to: 'shelters#index'
