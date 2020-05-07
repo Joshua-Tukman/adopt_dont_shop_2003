@@ -1,19 +1,21 @@
+<h1>New Shelter Form</h1>
+
 <%= form_tag "/shelters", method: :post do %>
 
-  <%= label_tag "Name" %><br>
-  <%= text_field_tag :name %><br>
+  <p><%= label_tag "Name:" %></p><br>
+  <p><%= text_field_tag :name %></p><br>
 
-  <%= label_tag "Address" %><br>
-  <%= text_field_tag :address %><br>
+  <p><%= label_tag "Address:" %></p><br>
+  <p><%= text_field_tag :address %></p><br>
 
-  <%= label_tag "City" %><br>
-  <%= text_field_tag :city %><br>
+  <p><%= label_tag "City:" %></p><br>
+  <p><%= text_field_tag :city %></p><br>
 
-  <%= label_tag "State" %><br>
-  <%= text_field_tag :state %><br>
+  <p><%= label_tag "State:" %></p><br>
+  <p><%= text_field_tag :state %></p><br>
 
-  <%= label_tag "Zipcode" %><br>
-  <%= text_field_tag :zip %><br>
+  <p><%= label_tag "Zipcode:" %></p><br>
+  <p><%= text_field_tag :zip %></p><br>
 
   <%= submit_tag "Create Shelter" %>
 <% end %>

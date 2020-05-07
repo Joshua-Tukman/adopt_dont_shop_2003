@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20200505214318) do
     t.string "name"
     t.integer "age"
     t.string "sex"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "shelter_id"
-    t.text "description"
     t.index ["shelter_id"], name: "index_pets_on_shelter_id"
   end
 

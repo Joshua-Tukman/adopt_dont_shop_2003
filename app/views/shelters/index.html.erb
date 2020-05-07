@@ -1,5 +1,5 @@
-<h1>All Adopt Don't Shop Shelters</h1>
-
+<h1 align="center">All Adopt Don't Shop Shelters</h1>
+<ol>
 <% @shelters.each do |shelter| %>
   <section id="shelter-<%= shelter.id %>">
     <h2><%= shelter.name %></h2>
@@ -9,5 +9,5 @@
     <p>Zipcode:<%= shelter.zip %></p>
   </section>
 <% end %>
-
+</ol>
 <%= link_to "New Shelter", "/shelters/new" %>
