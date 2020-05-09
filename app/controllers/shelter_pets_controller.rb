@@ -1,5 +1,5 @@
 class ShelterPetsController < ApplicationController
-  
+
   def index
     @shelter = Shelter.find(params[:shelter_id])
     @pets = @shelter.pets
@@ -15,6 +15,14 @@ class ShelterPetsController < ApplicationController
     if pet.save
       redirect_to "/shelters/#{shelter.id}/pets"
     end
+  end
+
+  def destroy
+
+    shelter = Shelter.find(params[:shelter_id])
+    pet = Pet.find(params[:pet_id])
+    pet.destroy
+    redirect_to "/shelters/#{shelter.id}/pets"
   end
 
   private

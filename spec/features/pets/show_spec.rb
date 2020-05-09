@@ -15,7 +15,7 @@ RSpec.describe 'As a visitor' do
                                       name: "Lucille",
                                       age: 3,
                                       description: "Lovable pitbull",
-                                      sex: "Female")
+                                      sex: "female")
 
       george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
                                      name: "George",
@@ -45,7 +45,7 @@ RSpec.describe 'As a visitor' do
                                       name: "Lucille",
                                       age: 3,
                                       description: "Lovable pitbull",
-                                      sex: "Female")
+                                      sex: "female")
 
       visit "/pets/#{lucille.id}"
 

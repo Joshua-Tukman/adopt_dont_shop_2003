@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'As a visitor' do
   describe 'shelter show page' do
-    
+
     before(:each) do
       @shelter1 = Shelter.create(name: "Pet House",
                                  address: "12 Main St.",
@@ -21,6 +21,16 @@ RSpec.describe 'As a visitor' do
                                  city: "Boulder",
                                  state: "Colorado",
                                  zip: "81111")
+
+      @lucille = @shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
+                                     name: "Lucille",
+                                     age: 3,
+                                     sex: "female")
+
+      @george = @shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
+                                     name: "George",
+                                     age: 4,
+                                     sex: "Male")
 
     end
 
@@ -55,5 +65,16 @@ RSpec.describe 'As a visitor' do
       expect(current_path).to eq("/shelters")
       expect(page).to_not have_content(@shelter1.name)
     end
+
+    it 'has a link to that shelters pets page' do
+
+      visit "/shelters/#{@shelter1.id}"
+
+      click_link "Pet's at Shelter"
+      expect(current_path).to eq("/shelters/#{@shelter1.id}/pets")
+      expect(page).to have_content(@lucille.name)
+      expect(page).to have_content(@george.name)
+    end
+
   end
 end

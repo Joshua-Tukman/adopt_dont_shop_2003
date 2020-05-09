@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'As a visitor' do
+RSpec.describe 'As a visitor', type: :feature do
   describe 'pets edit page' do
 
     it 'has a form to edit the pets information' do
@@ -14,7 +14,7 @@ RSpec.describe 'As a visitor' do
       lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
                                      name: "Lucille",
                                      age: 3,
-                                     sex: "Female")
+                                     sex: "female")
 
       george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
                                      name: "George",
@@ -33,8 +33,11 @@ RSpec.describe 'As a visitor' do
 
       expect(current_path).to eq("/pets/#{lucille.id}")
 
-      #expect(lucille.name).to eq("Lucy")
-      #expect(lucille.description).to eq("Excellent pet for people with kids!")
+      lucille.reload
+
+      expect(lucille.name).to eq("Lucy")
+
+      expect(lucille.description).to eq("Excellent pet for people with kids!")
     end
   end
 end

@@ -7,7 +7,7 @@
   <p><%= label_tag "Description" %></p><br>
   <p><%= text_field_tag :description, @pet.description %></p><br>
   <p><%= label_tag "Age" %></p><br>
-  <p><%= text_field_tag :age, @pet.age %></p><br>
+  <p><%= number_field_tag :age, @pet.age %></p><br>
   <p><%= label_tag "Sex" %></p><br>
   <p><%= text_field_tag :sex, @pet.sex %></p><br>
   <p><%= submit_tag "Update Pet" %>

@@ -12,7 +12,7 @@ RSpec.describe 'As a visitor' do
       lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
                                      name: "Lucille",
                                      age: 3,
-                                     sex: "Female")
+                                     sex: "female")
 
       george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
                                      name: "George",

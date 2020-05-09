@@ -2,11 +2,13 @@
 <ol>
 <% @shelters.each do |shelter| %>
   <section id="shelter-<%= shelter.id %>">
-    <h2><%= shelter.name %></h2>
+    <h2><%= link_to "#{shelter.name}", "/shelters/#{shelter.id}" %></h2>
     <p>Address:<%= shelter.address %></p>
     <p>City:<%= shelter.city %></p>
     <p>State:<%= shelter.state %></p>
     <p>Zipcode:<%= shelter.zip %></p>
+    <%= link_to "Edit Shelter", "/shelters/#{shelter.id}/edit" %><br>
+    <%= link_to "Delete Shelter", "/shelters/#{shelter.id}", method: :delete %>
   </section>
 <% end %>
 </ol>

@@ -57,12 +57,51 @@ RSpec.describe 'As a visitor' do
         expect(page).to_not have_content("#{@shelter2.name}")
       end
     end
+
     it 'has a link to create a new shelter' do
 
       visit "/shelters"
 
       click_link "New Shelter"
       expect(current_path).to eq("/shelters/new")
+    end
+
+    it 'has a link next to each shelter to edit that shelters info' do
+      visit "/shelters"
+      within "#shelter-#{@shelter1.id}" do
+        click_link "Edit Shelter"
+      end
+
+      expect(current_path).to eq("/shelters/#{@shelter1.id}/edit")
+
+      fill_in :name, with: "Don't Eat Animals"
+      fill_in :address, with: "12 Be A Vegan Dr."
+      fill_in :city, with: "Lake Placid"
+      fill_in :state, with: "New York"
+      fill_in :zip, with: "03232"
+
+      click_button "Update Shelter"
+
+      @shelter1.reload
+
+      expect(current_path).to eq("/shelters/#{@shelter1.id}")
+
+      expect(@shelter1.address).to eq("12 Be A Vegan Dr.")
+      expect(@shelter1.name).to eq("Don't Eat Animals")
+      expect(@shelter1.city).to eq("Lake Placid")
+      expect(@shelter1.state).to eq("New York")
+      expect(@shelter1.zip).to eq("03232")
+    end
+
+    it 'has a link next to each shelter to delete' do
+      visit "/shelters"
+      within "#shelter-#{@shelter1.id}" do
+        click_link "Delete Shelter"
+      end
+
+      expect(current_path).to eq("/shelters")
+
+      expect(page).to_not have_content("#{@shelter1.name}")
     end
   end
 end

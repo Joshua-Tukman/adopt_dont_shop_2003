@@ -6,6 +6,10 @@ class Shelter < ApplicationRecord
                         :state,
                         :zip
 
-  has_many :pets
+  has_many :pets, dependent: :delete_all
+
+  def num_pets
+    pets.count
+  end
 
 end

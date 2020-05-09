@@ -7,4 +7,12 @@ class Pet < ApplicationRecord
 
   belongs_to :shelter
 
+  def adoptable_status
+    if status
+      "Adoptable!"
+    else
+      "Pending"
+    end
+  end
+
 end
