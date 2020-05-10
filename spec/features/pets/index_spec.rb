@@ -164,30 +164,5 @@ RSpec.describe 'As a visitor' do
 
        visit "/pets"
      end
-
-     it 'has a link to change the adoptable status to pending' do
-       shelter1 = Shelter.create(name: "Pet House",
-                                 address: "12 Main St.",
-                                 city: "Denver",
-                                 state: "Colorado",
-                                 zip: "80001")
-
-       lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
-                                       name: "Lucille",
-                                       age: 3,
-                                       status: true,
-                                       description: "Lovable pitbull",
-                                       sex: "female")
-
-       visit "/pets"
-
-       within "#pet-#{lucille.id}" do
-         expect(lucille.adoptable_status).to eq("Adoptable!")
-         click_link "Adopt this Pet!"
-       end
-       lucille.reload
-       expect(current_path).to eq("/pets/#{lucille.id}")
-       expect(lucille.adoptable_status).to eq("Pending")
-     end
   end
 end

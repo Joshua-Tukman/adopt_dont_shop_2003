@@ -11,8 +11,5 @@
     <p><%= pet.adoptable_status %></p>
     <%= link_to "Edit Pet", "/pets/#{pet.id}/edit" %><br>
     <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
-    <% if pet.status == true %>
-      <p align="center"><%= link_to "Adopt this Pet!", "/pets/#{pet.id}/adoptable", method: :patch %></p>
-    <% end %>
   </section>
 <% end %>
