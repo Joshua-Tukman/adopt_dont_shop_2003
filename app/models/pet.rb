@@ -15,4 +15,7 @@ class Pet < ApplicationRecord
     end
   end
 
+  def self.sort_by_status
+    Pet.order(status: :desc)
+  end
 end

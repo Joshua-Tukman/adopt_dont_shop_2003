@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
 
   def index
-    @pets = Pet.all    
+    @pets = Pet.all
   end
 
   def show
@@ -22,6 +22,13 @@ class PetsController < ApplicationController
     pet = Pet.find(params[:id])
     pet.delete
     redirect_to "/pets"
+  end
+
+  def adoptable
+    pet = Pet.find(params[:id])    
+    pet.status = false
+    pet.save
+    redirect_to "/pets/#{pet.id}"
   end
 
   private

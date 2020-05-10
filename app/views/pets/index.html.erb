@@ -1,6 +1,7 @@
 <h1>All Pets</h1>
 <ol>
-<% @pets.each do |pet| %>
+<% @pets.sort_by_status.each do |pet| %>
+
   <section id="pet-<%=pet.id%>">
     <li><img src="<%= pet.image%>" width=  "400", height= auto></img></li>
     <h4>Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h4>
@@ -10,5 +11,8 @@
     <p><%= pet.adoptable_status %></p>
     <%= link_to "Edit Pet", "/pets/#{pet.id}/edit" %><br>
     <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
+    <% if pet.status == true %>
+      <p align="center"><%= link_to "Adopt this Pet!", "/pets/#{pet.id}/adoptable", method: :patch %></p>
+    <% end %>
   </section>
 <% end %>

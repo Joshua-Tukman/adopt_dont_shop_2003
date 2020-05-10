@@ -52,6 +52,7 @@ RSpec.describe 'As a visitor' do
       click_link "Update Pet"
 
       expect(current_path).to eq("/pets/#{lucille.id}/edit")
+
     end
   end
 end

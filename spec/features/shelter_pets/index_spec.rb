@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'As a visitor' do
   describe 'shelter pets index page' do
     it 'shows all the pets that can be adopted from the shelter with that id' do
+
       shelter1 = Shelter.create(name: "Pet House",
                                  address: "12 Main St.",
                                  city: "Denver",
@@ -18,17 +19,43 @@ RSpec.describe 'As a visitor' do
       lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
                                     name: "Lucille",
                                     age: 3,
+                                    status: false,
                                     sex: "female")
 
       george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
                                     name: "George",
                                     age: 4,
+                                    status: false,
                                     sex: "Male")
 
       roxy = shelter2.pets.create!(image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmetro.co.uk%2F2018%2F03%2F09%2Fpit-bulls-banned-uk-7374795%2F&psig=AOvVaw1rkxBBAl4-VTFxhvtSv3mg&ust=1588797005290000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj-_5rInekCFQAAAAAdAAAAABAO',
                                     name: "Roxy",
                                     age: 2,
                                     sex: "female")
+
+      bob = shelter1.pets.create!(image: 'https://i.ytimg.com/vi/8FCSw-ST8hA/maxresdefault.jpg',
+                                    name: "Bob",
+                                    description: "Handsome Pug!",
+                                    age: 2,
+                                    sex: "male")
+
+      gladys = shelter1.pets.create!(image: 'https://static.ddmcdn.com/en-us/apl/breedselector/images/breed-selector/dogs/breeds/dachshund-standard_01_lg.jpg',
+                                    name: "Gladys",
+                                    description: "A total terror!",
+                                    age: 4,
+                                    sex: "female")
+
+      maceo = shelter1.pets.create!(image: 'https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg',
+                                    name: "Maceo Parker",
+                                    age: 10,
+                                    description: "Best damn dog around!",
+                                    sex: "male")
+
+      charlie = shelter1.pets.create!(image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9IcR0ehgkAEqxBilz3GgsoQDLynWZILEPbmHQRPUrrdU0kXKV&usqp=CAU',
+                                    name: "Charles",
+                                    age: 6,
+                                    description: "Your new best friend",
+                                    sex: "male")
 
       visit "/shelters/#{shelter1.id}/pets"
 
@@ -169,7 +196,7 @@ RSpec.describe 'As a visitor' do
                                     sex: "female")
 
       visit "/shelters/#{shelter1.id}/pets"
-      
+
       expect(page).to have_content("Number of pets currently: 2")
     end
   end
