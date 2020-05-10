@@ -23,10 +23,17 @@ h1 {
 p {
   margin: 0px;
   font-size: 25px;
-  color: green;
+  color: black;
 }
 
-textarea {
-  width: 100px;
-  height: 70px;
+.error-flash {
+  padding: 10px;
+  background-color: red;
+  color: white;
+}
+
+.success-flash {
+  padding: 10px;
+  background-color: green;
+  color: white;
 }

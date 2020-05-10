@@ -31,13 +31,13 @@ lucille = shelter1.pets.create!(image: 'https://justsomething.co/wp-content/uplo
                               name: "Lucille",
                               age: 9,
                               sex: "female",
-                              status: false
+                              status: false,
                               description: "Lovable Pitbull")
 
 george = shelter1.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
                               name: "George",
                               age: 4,
-                              status: false
+                              status: false,
                               sex: "male")
 
 bob = shelter1.pets.create!(image: 'https://i.ytimg.com/vi/8FCSw-ST8hA/maxresdefault.jpg',
