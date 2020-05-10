@@ -1,10 +1,12 @@
 <h1><%= @shelter.name %></h1>
 <h3 align = "center"> Number of pets currently: <%= @shelter.num_pets %></h3>
+<p align="center"> <%= link_to "Only Adoptable Pets", "/shelters/#{@shelter.id}/pets?sort=only_adoptable"%>
+<p align="center"> <%= link_to "Only Pets with an Adoption Pending Status", "/shelters/#{@shelter.id}/pets?sort=only_pending"%>
 <h3 align = "center"><%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %></h3>
 
 
 <ol>
-<% @shelter.pets.sort_by_status.each do |pet| %>
+<% @pets.sort_by_status.each do |pet| %>
   <section id="pet-<%=pet.id%>">
     <img src="<%=pet.image%>" width="200", height=auto></img><br>
     <li><p>Name: <strong><%= link_to "#{pet.name}", "/pets/#{pet.id}"%></strong></p></li><br>
