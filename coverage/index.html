@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-05-10T12:23:30-06:00">2020-05-10T12:23:30-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-05-10T16:55:02-06:00">2020-05-10T16:55:02-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.52
+         1.71
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>556</b> relevant lines,
-    <span class="green"><b>556</b> lines covered</span> and
+    <b>616</b> relevant lines,
+    <span class="green"><b>616</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#46bc7edc395282e976b06be78a2a3c83c7b85a71" class="src_link" title="app/controllers/pets_controller.rb">app/controllers/pets_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">48</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">28</td>
+            <td class="cell--number">54</td>
+            <td class="cell--number">34</td>
+            <td class="cell--number">34</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.07</td>
+            <td class="cell--number">2.91</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">14.00</td>
+            <td class="cell--number">21.56</td>
             
           </tr>
         
@@ -315,11 +315,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a96f2cbd6b01c02a38e63fb697b1a789f1639230" class="src_link" title="spec/features/pets/index_spec.rb">spec/features/pets/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">168</td>
-            <td class="cell--number">54</td>
-            <td class="cell--number">54</td>
+            <td class="cell--number">244</td>
+            <td class="cell--number">108</td>
+            <td class="cell--number">108</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.42</td>
             
           </tr>
         
@@ -517,8 +517,8 @@
     
 
     <div class="t-line-summary">
-      <b>28</b> relevant lines.
-      <span class="green"><b>28</b> lines covered</span> and
+      <b>34</b> relevant lines.
+      <span class="green"><b>34</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -563,35 +563,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="8" data-linenumber="4">
-            <span class="hits">8</span>
+          <li class="covered" data-hits="13" data-linenumber="4">
+            <span class="hits">13</span>
             
 
             
 
-            <code class="ruby">    @pets = Pet.all</code>
+            <code class="ruby">    if params[:sort] == &quot;adoptable_pets&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">      @pets = Pet.order(:status).reverse</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="12" data-linenumber="6">
+            <span class="hits">12</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    elsif params[:sort] == &quot;only_adoptable&quot;</code>
           </li>
         </div>
       
@@ -602,29 +602,29 @@
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">      @pets = Pet.where(status: true)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="8">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="8">
+            <span class="hits">11</span>
             
 
             
 
-            <code class="ruby">    @pet = Pet.find(params[:id])</code>
+            <code class="ruby">    elsif params[:sort] == &quot;only_pending&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">      @pets = Pet.where(status: false)</code>
           </li>
         </div>
       
@@ -635,29 +635,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="10" data-linenumber="11">
+            <span class="hits">10</span>
             
 
             
 
-            <code class="ruby">  def edit</code>
+            <code class="ruby">      @pets = Pet.all</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="12">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">    @pet = Pet.find(params[:id])</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -690,12 +690,100 @@
 
             
 
+            <code class="ruby">  def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="16">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    @pet = Pet.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def edit</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="20">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    @pet = Pet.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  def update</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="16">
+          <li class="covered" data-hits="3" data-linenumber="24">
             <span class="hits">3</span>
             
 
@@ -706,7 +794,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="17">
+          <li class="covered" data-hits="3" data-linenumber="25">
             <span class="hits">3</span>
             
 
@@ -717,7 +805,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="18">
+          <li class="covered" data-hits="3" data-linenumber="26">
             <span class="hits">3</span>
             
 
@@ -728,7 +816,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -739,101 +827,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def destroy</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="22">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    pet = Pet.find(params[:id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="23">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    pet.delete</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="24">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    redirect_to &quot;/pets&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def adoptable</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    pet = Pet.find(params[:id])</code>
           </li>
         </div>
       
@@ -844,40 +844,40 @@
 
             
 
-            <code class="ruby">    pet.status = false</code>
+            <code class="ruby">  def destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="30">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    pet.save</code>
+            <code class="ruby">    pet = Pet.find(params[:id])</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="31">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    redirect_to &quot;/pets/#{pet.id}&quot;</code>
+            <code class="ruby">    pet.delete</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="32">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    redirect_to &quot;/pets&quot;</code>
           </li>
         </div>
       
@@ -888,18 +888,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="34">
+            
             
 
             
 
-            <code class="ruby">  def pending</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -910,7 +910,7 @@
 
             
 
-            <code class="ruby">    pet = Pet.find(params[:id])</code>
+            <code class="ruby">  def adoptable</code>
           </li>
         </div>
       
@@ -921,7 +921,7 @@
 
             
 
-            <code class="ruby">    pet.status = true</code>
+            <code class="ruby">    pet = Pet.find(params[:id])</code>
           </li>
         </div>
       
@@ -932,7 +932,7 @@
 
             
 
-            <code class="ruby">    pet.save</code>
+            <code class="ruby">    pet.status = false</code>
           </li>
         </div>
       
@@ -943,18 +943,18 @@
 
             
 
-            <code class="ruby">    redirect_to &quot;/pets/#{pet.id}&quot;</code>
+            <code class="ruby">    pet.save</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    redirect_to &quot;/pets/#{pet.id}&quot;</code>
           </li>
         </div>
       
@@ -965,7 +965,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -981,13 +981,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  def pending</code>
           </li>
         </div>
       
@@ -998,18 +998,18 @@
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">    pet = Pet.find(params[:id])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="44">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    pet.status = true</code>
           </li>
         </div>
       
@@ -1020,18 +1020,18 @@
 
             
 
-            <code class="ruby">  def pet_params</code>
+            <code class="ruby">    pet.save</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="46">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    params.permit(:name, :image, :description, :sex, :age)</code>
+            <code class="ruby">    redirect_to &quot;/pets/#{pet.id}&quot;</code>
           </li>
         </div>
       
@@ -1048,6 +1048,72 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def pet_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="52">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:name, :image, :description, :sex, :age)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -2346,8 +2412,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="52" data-linenumber="11">
-            <span class="hits">52</span>
+          <li class="covered" data-hits="90" data-linenumber="11">
+            <span class="hits">90</span>
             
 
             
@@ -2357,8 +2423,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="42" data-linenumber="12">
-            <span class="hits">42</span>
+          <li class="covered" data-hits="66" data-linenumber="12">
+            <span class="hits">66</span>
             
 
             
@@ -2379,8 +2445,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="14">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="24" data-linenumber="14">
+            <span class="hits">24</span>
             
 
             
@@ -2434,8 +2500,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="17" data-linenumber="19">
-            <span class="hits">17</span>
+          <li class="covered" data-hits="9" data-linenumber="19">
+            <span class="hits">9</span>
             
 
             
@@ -5601,8 +5667,8 @@
     
 
     <div class="t-line-summary">
-      <b>54</b> relevant lines.
-      <span class="green"><b>54</b> lines covered</span> and
+      <b>108</b> relevant lines.
+      <span class="green"><b>108</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5658,24 +5724,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="5">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    it &#39;shows a list of each pet in the system along with their information&#39; do</code>
+            <code class="ruby">    before(:each) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="6">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      @shelter1 = Shelter.create(name: &quot;Pet House&quot;,</code>
           </li>
         </div>
       
@@ -5686,18 +5752,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">                                 address: &quot;12 Main St.&quot;,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">      shelter1 = Shelter.create(name: &quot;Pet House&quot;,</code>
+            <code class="ruby">                                 city: &quot;Denver&quot;,</code>
           </li>
         </div>
       
@@ -5708,7 +5774,7 @@
 
             
 
-            <code class="ruby">                                 address: &quot;12 Main St.&quot;,</code>
+            <code class="ruby">                                 state: &quot;Colorado&quot;,</code>
           </li>
         </div>
       
@@ -5719,7 +5785,7 @@
 
             
 
-            <code class="ruby">                                 city: &quot;Denver&quot;,</code>
+            <code class="ruby">                                 zip: &quot;80001&quot;)</code>
           </li>
         </div>
       
@@ -5730,18 +5796,18 @@
 
             
 
-            <code class="ruby">                                 state: &quot;Colorado&quot;,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="6" data-linenumber="12">
+            <span class="hits">6</span>
             
 
-            <code class="ruby">                                 zip: &quot;80001&quot;)</code>
+            
+
+            <code class="ruby">       @shelter2 = Shelter.create(name: &quot;Love Pets&quot;,</code>
           </li>
         </div>
       
@@ -5752,18 +5818,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">                                  address: &quot;1111 Dog St.&quot;,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">      lucille = shelter1.pets.create!(image: &#39;https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg&#39;,</code>
+            <code class="ruby">                                  city: &quot;Los Angeles&quot;,</code>
           </li>
         </div>
       
@@ -5774,7 +5840,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Lucille&quot;,</code>
+            <code class="ruby">                                  state: &quot;California&quot;,</code>
           </li>
         </div>
       
@@ -5785,7 +5851,7 @@
 
             
 
-            <code class="ruby">                                     age: 3,</code>
+            <code class="ruby">                                  zip: &quot;90210&quot;)</code>
           </li>
         </div>
       
@@ -5796,18 +5862,18 @@
 
             
 
-            <code class="ruby">                                     status: false,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
+          <li class="covered" data-hits="6" data-linenumber="18">
+            <span class="hits">6</span>
             
 
-            <code class="ruby">                                     sex: &quot;female&quot;)</code>
+            
+
+            <code class="ruby">       @shelter3 = Shelter.create(name: &quot;Dogs Rock&quot;,</code>
           </li>
         </div>
       
@@ -5818,18 +5884,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">                                  address: &quot;Bark Rd.&quot;,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="20">
+            
             
 
             
 
-            <code class="ruby">      george = shelter1.pets.create!(image: &#39;https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443&#39;,</code>
+            <code class="ruby">                                  city: &quot;Boulder&quot;,</code>
           </li>
         </div>
       
@@ -5840,7 +5906,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;George&quot;,</code>
+            <code class="ruby">                                  state: &quot;Colorado&quot;,</code>
           </li>
         </div>
       
@@ -5851,7 +5917,7 @@
 
             
 
-            <code class="ruby">                                     age: 4,</code>
+            <code class="ruby">                                  zip: &quot;81111&quot;)</code>
           </li>
         </div>
       
@@ -5862,7 +5928,7 @@
 
             
 
-            <code class="ruby">                                     status: false,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5873,29 +5939,29 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;Male&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="25">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">       bob = shelter1.pets.create!(image: &#39;https://i.ytimg.com/vi/8FCSw-ST8hA/maxresdefault.jpg&#39;,</code>
+            <code class="ruby">       @lucille = @shelter1.pets.create!(image: &#39;https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">                                      name: &quot;Lucille&quot;,</code>
           </li>
         </div>
       
@@ -5906,7 +5972,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Bob&quot;,</code>
+            <code class="ruby">                                      age: 3,</code>
           </li>
         </div>
       
@@ -5917,7 +5983,7 @@
 
             
 
-            <code class="ruby">                                     description: &quot;Handsome Pug!&quot;,</code>
+            <code class="ruby">                                      status: false,</code>
           </li>
         </div>
       
@@ -5928,7 +5994,7 @@
 
             
 
-            <code class="ruby">                                     age: 2,</code>
+            <code class="ruby">                                      sex: &quot;female&quot;)</code>
           </li>
         </div>
       
@@ -5939,29 +6005,29 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;male&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="31">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">       gladys = shelter1.pets.create!(image: &#39;https://static.ddmcdn.com/en-us/apl/breedselector/images/breed-selector/dogs/breeds/dachshund-standard_01_lg.jpg&#39;,</code>
+            <code class="ruby">       @george = @shelter2.pets.create!(image: &#39;https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">                                      name: &quot;George&quot;,</code>
           </li>
         </div>
       
@@ -5972,7 +6038,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Gladys&quot;,</code>
+            <code class="ruby">                                      age: 4,</code>
           </li>
         </div>
       
@@ -5983,7 +6049,7 @@
 
             
 
-            <code class="ruby">                                     description: &quot;A total terror!&quot;,</code>
+            <code class="ruby">                                      status: false,</code>
           </li>
         </div>
       
@@ -5994,7 +6060,7 @@
 
             
 
-            <code class="ruby">                                     age: 4,</code>
+            <code class="ruby">                                      sex: &quot;Male&quot;)</code>
           </li>
         </div>
       
@@ -6005,29 +6071,29 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;female&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="37">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">       maceo = shelter1.pets.create!(image: &#39;https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg&#39;,</code>
+            <code class="ruby">       @bob = @shelter3.pets.create!(image: &#39;https://i.ytimg.com/vi/8FCSw-ST8hA/maxresdefault.jpg&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">                                     name: &quot;Bob&quot;,</code>
           </li>
         </div>
       
@@ -6038,7 +6104,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Maceo Parker&quot;,</code>
+            <code class="ruby">                                     description: &quot;Handsome Pug!&quot;,</code>
           </li>
         </div>
       
@@ -6049,7 +6115,7 @@
 
             
 
-            <code class="ruby">                                     age: 10,</code>
+            <code class="ruby">                                     age: 2,</code>
           </li>
         </div>
       
@@ -6060,7 +6126,7 @@
 
             
 
-            <code class="ruby">                                     description: &quot;Best damn dog around!&quot;,</code>
+            <code class="ruby">                                     sex: &quot;male&quot;)</code>
           </li>
         </div>
       
@@ -6071,29 +6137,29 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;male&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="43">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">       charlie = shelter1.pets.create!(image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9IcR0ehgkAEqxBilz3GgsoQDLynWZILEPbmHQRPUrrdU0kXKV&amp;usqp=CAU&#39;,</code>
+            <code class="ruby">       @gladys = @shelter1.pets.create!(image: &#39;https://static.ddmcdn.com/en-us/apl/breedselector/images/breed-selector/dogs/breeds/dachshund-standard_01_lg.jpg&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby">                                     name: &quot;Gladys&quot;,</code>
           </li>
         </div>
       
@@ -6104,7 +6170,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Charles&quot;,</code>
+            <code class="ruby">                                     description: &quot;A total terror!&quot;,</code>
           </li>
         </div>
       
@@ -6115,7 +6181,7 @@
 
             
 
-            <code class="ruby">                                     age: 6,</code>
+            <code class="ruby">                                     age: 4,</code>
           </li>
         </div>
       
@@ -6126,7 +6192,7 @@
 
             
 
-            <code class="ruby">                                     description: &quot;Your new best friend&quot;,</code>
+            <code class="ruby">                                     sex: &quot;female&quot;)</code>
           </li>
         </div>
       
@@ -6137,29 +6203,29 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;male&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="49">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      visit &quot;/pets&quot;</code>
+            <code class="ruby">       @maceo = @shelter2.pets.create!(image: &#39;https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby">                                     name: &quot;Maceo Parker&quot;,</code>
           </li>
         </div>
       
@@ -6170,62 +6236,62 @@
 
             
 
+            <code class="ruby">                                     age: 10,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">                                     description: &quot;Best damn dog around!&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby">                                     sex: &quot;male&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="6" data-linenumber="55">
+            <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      within &quot;#pet-#{lucille.id}&quot; do</code>
+            <code class="ruby">       @charlie = @shelter3.pets.create!(image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9IcR0ehgkAEqxBilz3GgsoQDLynWZILEPbmHQRPUrrdU0kXKV&amp;usqp=CAU&#39;,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="56">
+            
             
 
             
 
-            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{lucille.image}&#39;]&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(lucille.name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(lucille.sex)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(lucille.age)</code>
+            <code class="ruby">                                     name: &quot;Charles&quot;,</code>
           </li>
         </div>
       
@@ -6236,18 +6302,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">                                     age: 6,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="58">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="58">
+            
             
 
             
 
-            <code class="ruby">        expect(page).to_not have_content(george.name)</code>
+            <code class="ruby">                                     description: &quot;Your new best friend&quot;,</code>
           </li>
         </div>
       
@@ -6258,7 +6324,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">                                     sex: &quot;male&quot;)</code>
           </li>
         </div>
       
@@ -6269,18 +6335,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="61">
+            
             
 
             
 
-            <code class="ruby">      within &quot;#pet-#{george.id}&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6291,18 +6357,18 @@
 
             
 
-            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{george.image}&#39;]&quot;)</code>
+            <code class="ruby">    it &#39;shows a list of each pet in the system along with their information&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="63">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="63">
+            
             
 
             
 
-            <code class="ruby">        expect(page).to have_content(george.name)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6313,29 +6379,29 @@
 
             
 
-            <code class="ruby">        expect(page).to have_content(george.sex)</code>
+            <code class="ruby">      visit &quot;/pets&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_content(george.age)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#pet-0&quot; do</code>
           </li>
         </div>
       
@@ -6346,12 +6412,67 @@
 
             
 
-            <code class="ruby">        expect(page).to_not have_content(lucille.name)</code>
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="68">
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@lucille.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@lucille.sex)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@lucille.age)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to_not have_content(@george.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
             
             
 
@@ -6362,112 +6483,57 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="71">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;has a link next to each pet where I can edit the pet&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="72">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="73">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      shelter1 = Shelter.create(name: &quot;Pet House&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="74">
             
             
 
             
 
-            <code class="ruby">                                 address: &quot;12 Main St.&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="75">
-            
-            
-
-            
-
-            <code class="ruby">                                 city: &quot;Denver&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="76">
-            
-            
-
-            
-
-            <code class="ruby">                                 state: &quot;Colorado&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="77">
-            
-            
-
-            
-
-            <code class="ruby">                                 zip: &quot;80001&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="78">
-            
-            
-
-            
-
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#pet-1&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@george.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@george.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="78">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_content(@george.sex)</code>
           </li>
         </div>
       
@@ -6478,7 +6544,7 @@
 
             
 
-            <code class="ruby">      lucille = shelter1.pets.create!(image: &#39;https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg&#39;,</code>
+            <code class="ruby">        expect(page).to have_content(@george.age)</code>
           </li>
         </div>
       
@@ -6489,18 +6555,18 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Lucille&quot;,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="81">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     age: 3,</code>
+            
+
+            <code class="ruby">        expect(page).to_not have_content(@lucille.name)</code>
           </li>
         </div>
       
@@ -6511,7 +6577,7 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;female&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -6522,29 +6588,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="84">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="84">
+          <li class="covered" data-hits="1" data-linenumber="85">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      george = shelter1.pets.create!(image: &#39;https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443&#39;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="85">
-            
-            
-
-            
-
-            <code class="ruby">                                     name: &quot;George&quot;,</code>
+            <code class="ruby">    it &#39;has a link next to each pet where I can edit the pet&#39; do</code>
           </li>
         </div>
       
@@ -6555,18 +6621,18 @@
 
             
 
-            <code class="ruby">                                     age: 4,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="87">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="87">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     sex: &quot;Male&quot;)</code>
+            
+
+            <code class="ruby">      visit &quot;/pets&quot;</code>
           </li>
         </div>
       
@@ -6588,18 +6654,18 @@
 
             
 
-            <code class="ruby">      visit &quot;/pets&quot;</code>
+            <code class="ruby">      within &quot;#pet-0&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="90">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="90">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -6610,40 +6676,40 @@
 
             
 
-            <code class="ruby">      within &quot;#pet-#{lucille.id}&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="92">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{lucille.image}&#39;]&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="93">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">        click_link &quot;Edit Pet&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="94">
+          <li class="never" data-hits="" data-linenumber="92">
             
             
 
             
 
             <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="93">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="94">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(current_path).to eq(&quot;/pets/#{@lucille.id}/edit&quot;)</code>
           </li>
         </div>
       
@@ -6665,7 +6731,7 @@
 
             
 
-            <code class="ruby">      expect(current_path).to eq(&quot;/pets/#{lucille.id}/edit&quot;)</code>
+            <code class="ruby">      fill_in :image, with: &quot;https://www.petmd.com/sites/default/files/Pit-Bull-Dog-Facts-1168732600_0.jpg&quot;</code>
           </li>
         </div>
       
@@ -6687,7 +6753,7 @@
 
             
 
-            <code class="ruby">      fill_in :image, with: &quot;https://www.petmd.com/sites/default/files/Pit-Bull-Dog-Facts-1168732600_0.jpg&quot;</code>
+            <code class="ruby">      click_button &quot;Update Pet&quot;</code>
           </li>
         </div>
       
@@ -6709,12 +6775,23 @@
 
             
 
-            <code class="ruby">      click_button &quot;Update Pet&quot;</code>
+            <code class="ruby">      expect(current_path).to eq(&quot;/pets/#{@lucille.id}&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="covered" data-hits="1" data-linenumber="101">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(page).to have_css(&quot;img[src*= &#39;https://www.petmd.com/sites/default/files/Pit-Bull-Dog-Facts-1168732600_0.jpg&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="102">
             
             
 
@@ -6725,24 +6802,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="102">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="103">
+            
             
 
             
 
-            <code class="ruby">      expect(current_path).to eq(&quot;/pets/#{lucille.id}&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="103">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(page).to have_css(&quot;img[src*= &#39;https://www.petmd.com/sites/default/files/Pit-Bull-Dog-Facts-1168732600_0.jpg&#39;]&quot;)</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -6758,13 +6824,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="105">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">    it &#39;has a link next to each pet to delete that pet&#39; do</code>
           </li>
         </div>
       
@@ -6786,51 +6852,51 @@
 
             
 
-            <code class="ruby">    it &#39;has a link next to each pet to delete that pet&#39; do</code>
+            <code class="ruby">      visit &quot;/pets&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="108">
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="109">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      shelter1 = Shelter.create(name: &quot;Pet House&quot;,</code>
+            <code class="ruby">      within &quot;#pet-0&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="109">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="110">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                 address: &quot;12 Main St.&quot;,</code>
+            
+
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="110">
-            
-            
-
-            
-
-            <code class="ruby">                                 city: &quot;Denver&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="111">
-            
+          <li class="covered" data-hits="1" data-linenumber="111">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">                                 state: &quot;Colorado&quot;,</code>
+            <code class="ruby">        click_link &quot;Delete Pet&quot;</code>
           </li>
         </div>
       
@@ -6841,7 +6907,7 @@
 
             
 
-            <code class="ruby">                                 zip: &quot;80001&quot;)</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -6863,18 +6929,18 @@
 
             
 
-            <code class="ruby">      lucille = shelter1.pets.create!(image: &#39;https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg&#39;,</code>
+            <code class="ruby">      expect(current_path).to eq(&quot;/pets&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="115">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     name: &quot;Lucille&quot;,</code>
+            
+
+            <code class="ruby">      expect(page).to_not have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -6885,7 +6951,7 @@
 
             
 
-            <code class="ruby">                                     age: 3,</code>
+            <code class="ruby">     end</code>
           </li>
         </div>
       
@@ -6896,12 +6962,23 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;female&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="118">
+          <li class="covered" data-hits="1" data-linenumber="118">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;has a link to show all adoptable pets before the pets with pending status&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
             
             
 
@@ -6912,24 +6989,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="119">
+          <li class="covered" data-hits="1" data-linenumber="120">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      george = shelter1.pets.create!(image: &#39;https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443&#39;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="120">
-            
-            
-
-            
-
-            <code class="ruby">                                     name: &quot;George&quot;,</code>
+            <code class="ruby">      visit &quot;/pets&quot;</code>
           </li>
         </div>
       
@@ -6940,18 +7006,18 @@
 
             
 
-            <code class="ruby">                                     age: 4,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="122">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="122">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     sex: &quot;Male&quot;)</code>
+            
+
+            <code class="ruby">      within &quot;#pet-0&quot; do</code>
           </li>
         </div>
       
@@ -6962,7 +7028,7 @@
 
             
 
-            <code class="ruby">                                     visit &quot;/pets&quot;</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -6973,18 +7039,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="125">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="125">
+            
             
 
             
 
-            <code class="ruby">      within &quot;#pet-#{lucille.id}&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6995,7 +7061,7 @@
 
             
 
-            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{lucille.image}&#39;]&quot;)</code>
+            <code class="ruby">      within &quot;#pet-1&quot; do</code>
           </li>
         </div>
       
@@ -7006,7 +7072,7 @@
 
             
 
-            <code class="ruby">        click_link &quot;Delete Pet&quot;</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@george.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7039,7 +7105,7 @@
 
             
 
-            <code class="ruby">      expect(current_path).to eq(&quot;/pets&quot;)</code>
+            <code class="ruby">      within &quot;#pet-2&quot; do</code>
           </li>
         </div>
       
@@ -7050,7 +7116,7 @@
 
             
 
-            <code class="ruby">      expect(page).to_not have_css(&quot;img[src*= &#39;#{lucille.image}&#39;]&quot;)</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@bob.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7061,7 +7127,7 @@
 
             
 
-            <code class="ruby">     end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7083,7 +7149,7 @@
 
             
 
-            <code class="ruby">     it &#39;will display all of the adoptable pets before the pets with pending status&#39; do</code>
+            <code class="ruby">      within &quot;#pet-3&quot; do</code>
           </li>
         </div>
       
@@ -7094,7 +7160,7 @@
 
             
 
-            <code class="ruby">       shelter1 = Shelter.create(name: &quot;Pet House&quot;,</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@gladys.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7105,7 +7171,7 @@
 
             
 
-            <code class="ruby">                                  address: &quot;12 Main St.&quot;,</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7116,29 +7182,29 @@
 
             
 
-            <code class="ruby">                                  city: &quot;Denver&quot;,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="138">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="138">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                  state: &quot;Colorado&quot;,</code>
+            
+
+            <code class="ruby">      within &quot;#pet-4&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="139">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="139">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                  zip: &quot;80001&quot;)</code>
+            
+
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@maceo.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7149,40 +7215,40 @@
 
             
 
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="141">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="141">
+          <li class="covered" data-hits="1" data-linenumber="142">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">       lucille = shelter1.pets.create!(image: &#39;https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg&#39;,</code>
+            <code class="ruby">      within &quot;#pet-5&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="142">
-            
-            
-
-            
-
-            <code class="ruby">                                      name: &quot;Lucille&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="143">
-            
+          <li class="covered" data-hits="1" data-linenumber="143">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">                                      age: 3,</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@charlie.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7193,7 +7259,7 @@
 
             
 
-            <code class="ruby">                                      status: false,</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7204,12 +7270,23 @@
 
             
 
-            <code class="ruby">                                      sex: &quot;female&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="146">
+          <li class="covered" data-hits="1" data-linenumber="146">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      click_link &quot;Adoptable Pets First&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="147">
             
             
 
@@ -7220,35 +7297,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="147">
+          <li class="covered" data-hits="1" data-linenumber="148">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">       george = shelter1.pets.create!(image: &#39;https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443&#39;,</code>
+            <code class="ruby">      within &quot;#pet-0&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="148">
-            
-            
-
-            
-
-            <code class="ruby">                                      name: &quot;George&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="149">
-            
+          <li class="covered" data-hits="1" data-linenumber="149">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">                                      age: 4,</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@charlie.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7259,7 +7325,7 @@
 
             
 
-            <code class="ruby">                                      sex: &quot;Male&quot;,</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7270,18 +7336,18 @@
 
             
 
-            <code class="ruby">                                      status: false)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="152">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="152">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      within &quot;#pet-1&quot; do</code>
           </li>
         </div>
       
@@ -7292,7 +7358,7 @@
 
             
 
-            <code class="ruby">       maceo = shelter1.pets.create!(image: &#39;https://upload.wikimedia.org/wikipedia/commons/0/00/1._DSC_0346_%2810096362833%29.jpg&#39;,</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@maceo.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7303,7 +7369,7 @@
 
             
 
-            <code class="ruby">                                     name: &quot;Maceo Parker&quot;,</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7314,29 +7380,29 @@
 
             
 
-            <code class="ruby">                                     age: 10,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="156">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="156">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     description: &quot;Best damn dog around!&quot;,</code>
+            
+
+            <code class="ruby">      within &quot;#pet-2&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="157">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="157">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                                     sex: &quot;male&quot;)</code>
+            
+
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@gladys.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7347,40 +7413,40 @@
 
             
 
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="159">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="159">
+          <li class="covered" data-hits="1" data-linenumber="160">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">       charlie = shelter1.pets.create!(image: &#39;https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9IcR0ehgkAEqxBilz3GgsoQDLynWZILEPbmHQRPUrrdU0kXKV&amp;usqp=CAU&#39;,</code>
+            <code class="ruby">      within &quot;#pet-3&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="160">
-            
-            
-
-            
-
-            <code class="ruby">                                     name: &quot;Charles&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="161">
-            
+          <li class="covered" data-hits="1" data-linenumber="161">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">                                     age: 6,</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@bob.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7391,7 +7457,7 @@
 
             
 
-            <code class="ruby">                                     description: &quot;Your new best friend&quot;,</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7402,18 +7468,18 @@
 
             
 
-            <code class="ruby">                                     sex: &quot;male&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="164">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="164">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      within &quot;#pet-4&quot; do</code>
           </li>
         </div>
       
@@ -7424,7 +7490,7 @@
 
             
 
-            <code class="ruby">       visit &quot;/pets&quot;</code>
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@george.image}&#39;]&quot;)</code>
           </li>
         </div>
       
@@ -7435,7 +7501,7 @@
 
             
 
-            <code class="ruby">     end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -7446,12 +7512,848 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="168">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      within &quot;#pet-5&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="169">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="170">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="171">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="172">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="173">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;has a link to show only adoptable pet&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="174">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="175">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       visit &quot;/pets&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="176">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="177">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-0&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="178">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="179">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="180">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="181">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-1&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="182">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@george.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="183">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="184">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="185">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-2&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="186">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@bob.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="187">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="188">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="189">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-3&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="190">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@gladys.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="191">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="192">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="193">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-4&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="194">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@maceo.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="195">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="196">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="197">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-5&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="198">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@charlie.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="199">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="200">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="201">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       click_link &quot;Only Adoptable Pets&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="202">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="203">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to have_content(@gladys.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="204">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to_not have_content(@lucille.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="205">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to_not have_content(@george.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="206">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="207">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="208">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">     it &#39;has a link to show only pet who have adoption status pending&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="209">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="210">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       visit &quot;/pets&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="211">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="212">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-0&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="213">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@lucille.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="214">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="215">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="216">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-1&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="217">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@george.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="218">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="219">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="220">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-2&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="221">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@bob.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="222">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="223">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="224">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-3&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="225">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@gladys.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="226">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="227">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="228">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-4&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="229">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@maceo.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="230">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="231">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="232">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       within &quot;#pet-5&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="233">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(page).to have_css(&quot;img[src*= &#39;#{@charlie.image}&#39;]&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="234">
+            
+            
+
+            
+
+            <code class="ruby">       end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="235">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="236">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       click_link &quot;Only Pets with an Adoption Pending Status&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="237">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="238">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to have_content(@lucille.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="239">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to have_content(@george.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="240">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to_not have_content(@gladys.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="241">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">       expect(page).to_not have_content(@maceo.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="242">
+            
+            
+
+            
+
+            <code class="ruby">     end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="243">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="168">
+          <li class="never" data-hits="" data-linenumber="244">
             
             
 
@@ -12659,7 +13561,7 @@
 
             
 
-            <code class="ruby">        address: &quot;Bark Rd.&quot;,</code>
+            <code class="ruby">                                 address: &quot;Bark Rd.&quot;,</code>
           </li>
         </div>
       
@@ -12670,7 +13572,7 @@
 
             
 
-            <code class="ruby">        city: &quot;Boulder&quot;,</code>
+            <code class="ruby">                                 city: &quot;Boulder&quot;,</code>
           </li>
         </div>
       
@@ -12681,7 +13583,7 @@
 
             
 
-            <code class="ruby">        state: &quot;Colorado&quot;,</code>
+            <code class="ruby">                                 state: &quot;Colorado&quot;,</code>
           </li>
         </div>
       
@@ -12692,7 +13594,7 @@
 
             
 
-            <code class="ruby">        zip: &quot;81111&quot;)</code>
+            <code class="ruby">                                 zip: &quot;81111&quot;)</code>
           </li>
         </div>
       
@@ -12725,7 +13627,7 @@
 
             
 
-            <code class="ruby">                                    name: &quot;Lucille&quot;,</code>
+            <code class="ruby">                                        name: &quot;Lucille&quot;,</code>
           </li>
         </div>
       
@@ -12736,7 +13638,7 @@
 
             
 
-            <code class="ruby">                                    age: 9,</code>
+            <code class="ruby">                                        age: 9,</code>
           </li>
         </div>
       
@@ -12747,7 +13649,7 @@
 
             
 
-            <code class="ruby">                                    sex: &quot;female&quot;,</code>
+            <code class="ruby">                                        sex: &quot;female&quot;,</code>
           </li>
         </div>
       
@@ -12758,7 +13660,7 @@
 
             
 
-            <code class="ruby">                                    status: false,</code>
+            <code class="ruby">                                        status: false,</code>
           </li>
         </div>
       
@@ -12769,7 +13671,7 @@
 
             
 
-            <code class="ruby">                                    description: &quot;Lovable Pitbull&quot;)</code>
+            <code class="ruby">                                        description: &quot;Lovable Pitbull&quot;)</code>
           </li>
         </div>
       
@@ -12802,7 +13704,7 @@
 
             
 
-            <code class="ruby">                                    name: &quot;George&quot;,</code>
+            <code class="ruby">                                       name: &quot;George&quot;,</code>
           </li>
         </div>
       
@@ -12813,7 +13715,7 @@
 
             
 
-            <code class="ruby">                                    age: 4,</code>
+            <code class="ruby">                                       age: 4,</code>
           </li>
         </div>
       
@@ -12824,7 +13726,7 @@
 
             
 
-            <code class="ruby">                                    status: false,</code>
+            <code class="ruby">                                       status: false,</code>
           </li>
         </div>
       
@@ -12835,7 +13737,7 @@
 
             
 
-            <code class="ruby">                                    sex: &quot;male&quot;)</code>
+            <code class="ruby">                                       sex: &quot;male&quot;)</code>
           </li>
         </div>
       

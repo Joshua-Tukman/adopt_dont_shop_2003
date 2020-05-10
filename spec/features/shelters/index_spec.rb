@@ -17,23 +17,23 @@ RSpec.describe 'As a visitor' do
                                  zip: "90210")
 
       @shelter3 = Shelter.create(name: "Dogs Rock",
-        address: "Bark Rd.",
-        city: "Boulder",
-        state: "Colorado",
-        zip: "81111")
+                                 address: "Bark Rd.",
+                                 city: "Boulder",
+                                 state: "Colorado",
+                                 zip: "81111")
 
       @lucille = @shelter3.pets.create!(image: 'https://justsomething.co/wp-content/uploads/2014/08/pitbull-photos-13.jpg',
-                                    name: "Lucille",
-                                    age: 9,
-                                    sex: "female",
-                                    status: false,
-                                    description: "Lovable Pitbull")
+                                        name: "Lucille",
+                                        age: 9,
+                                        sex: "female",
+                                        status: false,
+                                        description: "Lovable Pitbull")
 
       @george = @shelter3.pets.create!(image: 'https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/05/Golden-retriever.jpg?resize=752%2C443',
-                                    name: "George",
-                                    age: 4,
-                                    status: false,
-                                    sex: "male")
+                                       name: "George",
+                                       age: 4,
+                                       status: false,
+                                       sex: "male")
 
       @bob = @shelter3.pets.create!(image: 'https://i.ytimg.com/vi/8FCSw-ST8hA/maxresdefault.jpg',
                                     name: "Bob",

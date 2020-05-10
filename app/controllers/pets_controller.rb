@@ -1,7 +1,15 @@
 class PetsController < ApplicationController
 
   def index
-    @pets = Pet.all
+    if params[:sort] == "adoptable_pets"
+      @pets = Pet.order(:status).reverse
+    elsif params[:sort] == "only_adoptable"
+      @pets = Pet.where(status: true)
+    elsif params[:sort] == "only_pending"
+      @pets = Pet.where(status: false)
+    else
+      @pets = Pet.all
+    end
   end
 
   def show
@@ -37,8 +45,6 @@ class PetsController < ApplicationController
     pet.save
     redirect_to "/pets/#{pet.id}"
   end
-
-
 
   private
 
